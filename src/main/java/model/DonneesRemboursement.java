@@ -1,3 +1,5 @@
+package model;
+
 class DonneesRemboursement {
     private String numeroSecuriteSociale;
     private String nom;
@@ -13,7 +15,7 @@ class DonneesRemboursement {
 
     @Override
     public String toString() {
-        return "DonneesRemboursement{" +
+        return "model.DonneesRemboursement{" +
                 "numeroSecuriteSociale='" + numeroSecuriteSociale + '\'' +
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
