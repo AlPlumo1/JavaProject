@@ -1,9 +1,10 @@
+package model;
+
 import java.io.File;
 import java.io.FilenameFilter;
 public class Reader {
 
-    public static void lookFile(String[] args) {
-        String folderPath = "src/resources/FileToLook"; // Remplacez par le chemin absolu du dossier à scruter
+    public static File[] lookFile(String folderPath ) { //On passe en paramètre de la fonction le chemin à scruter
 
         File folder = new File(folderPath);
 
@@ -21,10 +22,12 @@ public class Reader {
         if (files != null) {
             for (File file : files) {
                 System.out.println("Fichier trouvé : " + file.getName());
-                return;
+                return files;
             }
         } else {
             System.out.println("Aucun fichier trouvé dans le dossier spécifié.");
         }
+        return null;
     }
+
 }
