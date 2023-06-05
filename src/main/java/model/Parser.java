@@ -3,6 +3,7 @@ package model;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 public class Parser {
@@ -23,7 +24,7 @@ public class Parser {
                     String numeroSecuriteSociale = fields[0].trim();
                     String nom = fields[1].trim();
                     String prenom = fields[2].trim();
-                    String dateNaissance = fields[3].trim();
+                    java.sql.Date dateNaissance = Date.valueOf(fields[3].trim());
                     String numeroTelephone = fields[4].trim();
                     String email = fields[5].trim();
                     String idRemboursement = fields[6].trim();
